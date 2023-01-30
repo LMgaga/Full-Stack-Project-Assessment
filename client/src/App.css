@@ -25,3 +25,29 @@ h6 {
   background-color: #254e70;
   padding: 2rem 0;
 }
+.AddVideo {
+  display: flex;
+}
+.FirstVideo {
+  width: 30%; margin: 1rem;
+}
+.SecondVideo {
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.SearchDiv {
+  width: 40%;
+  margin: 2rem;
+}
+.input,
+.search {
+  margin-left: 1rem;
+}
+.search {
+  width: 50%;
+  height: 2rem;
+}
+.hideData {
+  display: none;
+}

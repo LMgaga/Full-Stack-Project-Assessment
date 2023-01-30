@@ -1,13 +1,19 @@
-import react from 'react'
+import react, {useState} from 'react'
 function AddVideo(props) {
+    const [showForm, setShowForm] = useState("hideData")
+    let hideInput = "hideData"
+    function revealInput() {
+    setShowForm("")
+       hideInput = ""
+    }
     return(
      <div>
-        <div className ="addVideo" style="display: flex;">
-            <div style="width: 30%; margin: 1rem;">
-                <a href="#0" style="font-style: normal; text-decoration: none; font-size: 1.2rem;">
+        <div className ="addVideo">
+            <div className='FirstVideo'>
+                <a href="#0" className='SecondVideo' onClick={revealInput}>
                     Add video
                 </a>
-                <form id="form">
+                <form id="form" className= {hideInput}>
                     <div>
                         <label>Title
                             <input className="input" name="title" type="text" required=""/>
@@ -25,13 +31,14 @@ function AddVideo(props) {
                     </div>
                 </form>
             </div>
-                <div style="width: 40%; margin: 2rem;">
+                {/* <div className="SearchDiv">
                     <label>Search<input className="search" name="search" type="text" value=""/>
                     </label>
-                </div>
+                </div> */}
                 </div>
                 <div className="allVidContainer">
-                    </div></div>
+                    </div>
+        </div>
     )
 }
 
