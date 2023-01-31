@@ -1,10 +1,11 @@
 import react, {useState} from 'react'
 function AddVideo(props) {
     const [showForm, setShowForm] = useState("hideData")
-    let hideInput = "hideData"
     function revealInput() {
-    setShowForm("")
-       hideInput = ""
+       setShowForm("")
+    }
+    function addSingleVideo() {
+     
     }
     return(
      <div>
@@ -13,7 +14,7 @@ function AddVideo(props) {
                 <a href="#0" className='SecondVideo' onClick={revealInput}>
                     Add video
                 </a>
-                <form id="form" className= {hideInput}>
+                <form id="form" className= {showForm}>
                     <div>
                         <label>Title
                             <input className="input" name="title" type="text" required=""/>
@@ -25,8 +26,8 @@ function AddVideo(props) {
                         </label>
                     </div>
                     <div>
-                        <button className="btn btn-warning input" type="cancel">Cancel
-                        </button><button className="btn btn-danger input" type="submit">ADD
+                        <button className="btn btn-warning input" type="cancel">Cancel</button>
+                        <button className="btn btn-danger input" type="submit" onClick={addSingleVideo}>ADD
                         </button>
                     </div>
                 </form>
