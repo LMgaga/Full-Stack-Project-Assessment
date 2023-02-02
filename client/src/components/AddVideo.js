@@ -5,7 +5,7 @@ function AddVideo(props) {
        setShowForm("")
     }
     function addSingleVideo() {
-     
+     props.showVideos()
     }
     return(
      <div>
@@ -32,13 +32,10 @@ function AddVideo(props) {
                     </div>
                 </form>
             </div>
-                {/* <div className="SearchDiv">
-                    <label>Search<input className="search" name="search" type="text" value=""/>
-                    </label>
-                </div> */}
-                </div>
+              
+        </div>
                 <div className="allVidContainer">
-                    </div>
+                </div>
         </div>
     )
 }

@@ -1,19 +1,27 @@
 import "./App.css";
 import AddVideo from './components/AddVideo'
 import ShowVideo from './components/ShowVideo'
+import { useState } from "react";
 
 function App() {
- let displayVideo = "hideData"
+  const [displayVideo, setDisplayVideo] = useState({
+      showVideo: "hideData",
+      videos: [
+          "https://www.youtube.com/embed/dLIJ0L7KVwE",
+          "https://www.youtube.com/embed/dLIJ0L7KVwE",
+          "https://www.youtube.com/embed/dLIJ0L7KVwE"
+      ]
+  })
   function showVideos() {
-    displayVideo = ""
+     setDisplayVideo({...displayVideo, showVideo: ''})
   }
   return (
     <div className="App">
       <header className="App-header">
         <h1>Video Recommendation</h1>
       </header>
-      <AddVideo></AddVideo>
-      <ShowVideo displayVideo = {displayVideo} showVideos = {showVideos}></ShowVideo>
+      <AddVideo showVideos = {showVideos}></AddVideo>
+      <ShowVideo displayVideo = {displayVideo} key = "showVideo"></ShowVideo>
 
     </div>
   );
