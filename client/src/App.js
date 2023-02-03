@@ -7,9 +7,8 @@ function App() {
   const [displayVideo, setDisplayVideo] = useState({
       showVideo: "hideData",
       videos: [
-          "https://www.youtube.com/embed/dLIJ0L7KVwE",
-          "https://www.youtube.com/embed/dLIJ0L7KVwE",
           "https://www.youtube.com/embed/dLIJ0L7KVwE"
+         
       ]
   })
   function showVideos() {
@@ -20,7 +19,7 @@ function App() {
       <header className="App-header">
         <h1>Video Recommendation</h1>
       </header>
-      <AddVideo showVideos = {showVideos}></AddVideo>
+      <AddVideo displayVideo = {displayVideo} showVideos = {showVideos}></AddVideo>
       <ShowVideo displayVideo = {displayVideo} key = "showVideo"></ShowVideo>
 
     </div>
