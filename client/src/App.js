@@ -7,8 +7,10 @@ function App() {
   const [displayVideo, setDisplayVideo] = useState({
       showVideo: "hideData",
       videos: [
-          "https://www.youtube.com/embed/dLIJ0L7KVwE"
-         
+          {
+              title: 'default',
+              url: "https://www.youtube.com/embed/dLIJ0L7KVwE"
+          }
       ]
   })
   function showVideos() {

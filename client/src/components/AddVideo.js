@@ -7,14 +7,37 @@ function AddVideo(props) {
        setShowForm("")
     }
     function addSingleVideo() {
-     props.diplayVideo.videos.push(url)
+     props.displayVideo.videos.push(url)
+     setTitle('')
+     setUrl('')
      props.showVideos()
     }
+   
+    function addSingleVideo() {
+     props.displayVideo.videos.push(url)
+     setTitle('')
+     setUrl('')
+     props.showVideos()
+    }
+     
+    function addSingleVideo() {
+     props.displayVideo.videos.push(url)
+     setTitle('')
+     setUrl('')
+     props.showVideos()
+    }
+
     function addTitle(e) {
+       e.preventDefault()
        setTitle(e.target.value)
     }
-     function addUrl(e) {
-       setUrl(e.target.value)
+
+    function addUrl(e) {
+        e.preventDefault()
+       setUrl({
+           title: title,
+           url: e.target.value
+       })
     }
     return(
      <div>
@@ -36,7 +59,7 @@ function AddVideo(props) {
                     </div>
                     <div>
                         <button className="btn btn-warning input" type="cancel">Cancel</button>
-                        <button className="btn btn-danger input" type="submit" onClick={addSingleVideo}>ADD
+                        <button className="btn btn-danger input" type="button" onClick={addSingleVideo}>ADD
                         </button>
                     </div>
                 </form>
